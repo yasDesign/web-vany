@@ -10,7 +10,7 @@
   "courses": [
     {
       "id": 1,
-      "name": "Marketing para Principiantes",
+      "name": "Marketing para Principiantes1",
       "description": "Domina las redes sociales desde cero.",
       "content": "<h3>Módulo 1</h3><p>Introducción al branding...</p>",
       "price": 49.99,
@@ -21,7 +21,7 @@
     },
      {
       "id": 2,
-      "name": "Marketing para Principiantes",
+      "name": "Marketing para Principiantes2",
       "description": "Domina las redes sociales desde cero.",
       "content": "<h3>Módulo 1</h3><p>Introducción al branding...</p>",
       "price": 49.99,
@@ -32,7 +32,7 @@
     },
      {
       "id": 3,
-      "name": "Marketing para Principiantes",
+      "name": "Marketing para Principiantes3",
       "description": "Domina las redes sociales desde cero.",
       "content": "<h3>Módulo 1</h3><p>Introducción al branding...</p>",
       "price": 49.99,
@@ -43,7 +43,7 @@
     },
      {
       "id": 4,
-      "name": "Marketing para Principiantes",
+      "name": "Marketing para Principiantes4",
       "description": "Domina las redes sociales desde cero.",
       "content": "<h5>Módulo 1</h5><ul><li>Torata 1</li></ul>",
       "price": 49.99,

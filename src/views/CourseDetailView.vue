@@ -68,7 +68,8 @@ watch(() => route.params.slug, (newSlug) => {
 
 const whatsappUrl = computed(() => {
     if (!course.value || !siteConfig.value) return '#';
-    const message = encodeURIComponent(`¡Hola! Me interesa el curso: ${course.value.name}`);
+    const currentUrl = window.location.origin + route.fullPath;
+    const message = encodeURIComponent(`¡Hola! Me interesa el curso: ${course.value.name}\nVer detalles: ${currentUrl}`);
     return `https://wa.me/${siteConfig.value.phone}?text=${message}`;
 });
 </script>
