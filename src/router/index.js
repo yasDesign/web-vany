@@ -12,7 +12,7 @@ const router = createRouter({
       component: () => import('../views/CoursesView.vue') 
     },
     { 
-      path: '/curso/:slug', 
+      path: '/cursos/:slug', 
       name: 'course-detail', 
       component: () => import('../views/CourseDetailView.vue'),
       props: true 

@@ -1,5 +1,5 @@
 <template>
-  <a :href="'https://wa.me/' + config?.whatsapp" 
+  <a :href="'https://wa.me/' + siteConfig?.phone" 
      class="whatsapp-float" target="_blank">
     <i class="bi bi-whatsapp"></i>
   </a>
@@ -7,7 +7,7 @@
 
 <script setup>
 import { useData } from '../composables/useData';
-const { config } = useData();
+const { siteConfig } = useData();
 </script>
 
 <style scoped>

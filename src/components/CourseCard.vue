@@ -17,7 +17,7 @@
         </span>
       </div>
       
-      <router-link :to="'/curso/' + course.id" class="btn btn-primary mt-3 w-100">
+      <router-link :to="'/cursos/' + course.id" class="btn btn-primary mt-3 w-100">
         Ver Detalles
       </router-link>
     </div>

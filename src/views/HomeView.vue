@@ -8,6 +8,7 @@
 import { useSeo } from '../composables/useSeo';
 import HeroSection from '../components/HeroSection.vue';
 import LatestCourses from '../components/LatestCourses.vue';
+import { onMounted } from 'vue';
 
 const { updateMeta } = useSeo();
 

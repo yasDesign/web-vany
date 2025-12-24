@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-import { computed, watch, ref } from 'vue';
+import { computed, watch, ref, watchEffect } from 'vue';
 import { useRoute } from 'vue-router';
 import { useData } from '../composables/useData';
 import { useSeo } from '../composables/useSeo';
@@ -69,7 +69,7 @@ watch(() => route.params.slug, (newSlug) => {
 const whatsappUrl = computed(() => {
     if (!course.value || !siteConfig.value) return '#';
     const message = encodeURIComponent(`¡Hola! Me interesa el curso: ${course.value.name}`);
-    return `https://wa.me/${siteConfig.value.whatsapp}?text=${message}`;
+    return `https://wa.me/${siteConfig.value.phone}?text=${message}`;
 });
 </script>
 
