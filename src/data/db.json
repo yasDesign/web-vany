@@ -1,0 +1,61 @@
+{
+  "siteConfig": {
+    "title": "Academia Digital",
+    "phone": "59170000000",
+    "socials": { "instagram": "@user", "facebook": "user.page" },
+    "banners": [
+      { "id": 1, "image": "banner1.jpg", "title": "Aprende a Emprender" }
+    ]
+  },
+  "courses": [
+    {
+      "id": 1,
+      "name": "Marketing para Principiantes",
+      "description": "Domina las redes sociales desde cero.",
+      "content": "<h3>Módulo 1</h3><p>Introducción al branding...</p>",
+      "price": 49.99,
+      "discount": 10,
+      "category": "Marketing",
+      "tags": ["Ventas", "Digital"],
+      "image": "https://picsum.photos/400/300"
+    },
+     {
+      "id": 2,
+      "name": "Marketing para Principiantes",
+      "description": "Domina las redes sociales desde cero.",
+      "content": "<h3>Módulo 1</h3><p>Introducción al branding...</p>",
+      "price": 49.99,
+      "discount": 10,
+      "category": "Marketing",
+      "tags": ["Ventas", "Digital"],
+      "image": "https://picsum.photos/400/300"
+    },
+     {
+      "id": 3,
+      "name": "Marketing para Principiantes",
+      "description": "Domina las redes sociales desde cero.",
+      "content": "<h3>Módulo 1</h3><p>Introducción al branding...</p>",
+      "price": 49.99,
+      "discount": 10,
+      "category": "Marketing",
+      "tags": ["Ventas", "Digital"],
+      "image": "https://picsum.photos/400/300"
+    },
+     {
+      "id": 4,
+      "name": "Marketing para Principiantes",
+      "description": "Domina las redes sociales desde cero.",
+      "content": "<h5>Módulo 1</h5><ul><li>Torata 1</li></ul>",
+      "price": 49.99,
+      "discount": 10,
+      "category": "Marketing",
+      "tags": ["Ventas", "Digital"],
+      "image": "https://picsum.photos/400/300"
+    }
+  ],
+  "sponsors": [
+    { "name": "Google", "image": "logo-google.png", "link": "https://google.com" },
+    { "name": "Facebook", "image": "logo-facebook.png", "link": "https://facebook.com" },
+    { "name": "Amazon", "image": "logo-amazon.png", "link": "https://amazon.com" }
+  ]
+}

@@ -1,0 +1,24 @@
+:root {
+  --primary-pink: #ff85a2;
+  --soft-cream: #fff5f2;
+  --dark-text: #4a3f3f;
+  --organic-shape: url("data:image/svg+xml,..."); /* Aquí simularemos los blobs */
+}
+
+body {
+  background-color: var(--soft-cream);
+  color: var(--dark-text);
+  font-family: 'Quicksand', sans-serif; /* Tipografía redondeada sugerida */
+}
+
+.blob-shape {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background-color: var(--primary-pink);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
+}
