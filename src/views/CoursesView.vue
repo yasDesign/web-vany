@@ -36,6 +36,11 @@
     <div class="row g-4">
       <div class="col-12 col-md-6 col-lg-3" v-for="course in filteredCourses" :key="course.id">
         <CourseCard :course="course" />
+        <div class="d-grid mt-2">
+          <a :href="getWhatsappUrl(course)" target="_blank" class="btn btn-outline-success btn-sm rounded-pill">
+            <i class="bi bi-whatsapp me-1"></i> Consultar
+          </a>
+        </div>
       </div>
 
       <div v-if="filteredCourses.length === 0" class="text-center py-5">
@@ -51,7 +56,7 @@ import { ref, computed } from 'vue';
 import { useData } from '../composables/useData';
 import CourseCard from '../components/CourseCard.vue';
 
-const { courses } = useData();
+const { courses, siteConfig } = useData();
 const search = ref('');
 const selectedCategory = ref('Todos');
 
@@ -72,6 +77,13 @@ const filteredCourses = computed(() => {
     return matchesSearch && matchesCategory;
   });
 });
+
+const getWhatsappUrl = (course) => {
+  if (!siteConfig.value) return '#';
+  const courseUrl = `${window.location.origin}/cursos/${course.id}`;
+  const message = encodeURIComponent(`¡Hola! Me interesa el curso: ${course.name}\nVer detalles: ${courseUrl}`);
+  return `https://wa.me/${siteConfig.value.phone}?text=${message}`;
+};
 </script>
 
 <style scoped>

@@ -17,7 +17,7 @@
       "discount": 10,
       "category": "Marketing",
       "tags": ["Ventas", "Digital"],
-      "image": "https://picsum.photos/400/300"
+      "image": "banner1.jpg"
     },
      {
       "id": 2,
@@ -28,7 +28,7 @@
       "discount": 10,
       "category": "Marketing",
       "tags": ["Ventas", "Digital"],
-      "image": "https://picsum.photos/400/300"
+      "image": "banner2.jpg"
     },
      {
       "id": 3,
@@ -39,7 +39,7 @@
       "discount": 10,
       "category": "Marketing",
       "tags": ["Ventas", "Digital"],
-      "image": "https://picsum.photos/400/300"
+      "image": "banner3.jpg"
     },
      {
       "id": 4,
@@ -50,7 +50,7 @@
       "discount": 10,
       "category": "Marketing",
       "tags": ["Ventas", "Digital"],
-      "image": "https://picsum.photos/400/300"
+      "image": "banner4.jpg"
     }
   ],
   "sponsors": [

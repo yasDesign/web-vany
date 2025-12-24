@@ -1,7 +1,7 @@
 <template>
   <div class="card h-100 border-0 shadow-sm custom-card">
     <div class="card-img-container p-3">
-      <img :src="course.image" class="card-img-top blob-shape" :alt="course.name">
+      <img :src="getImageUrl(course.image)" class="card-img-top blob-shape" :alt="course.name">
     </div>
     <div class="card-body text-center pt-0">
       <span class="badge rounded-pill bg-light text-primary mb-2">{{ course.category }}</span>
@@ -28,6 +28,15 @@
 import { useData } from '../composables/useData';
 const props = defineProps(['course']);
 const { calculateDiscount } = useData();
+
+const getImageUrl = (imageName) => {
+  // Si no hay imagen, retornamos vacío
+  if (!imageName) return '';
+  // Si es una URL externa (http) o absoluta (/), la usamos tal cual
+  if (imageName.startsWith('http') || imageName.startsWith('/')) return imageName;
+  // Si es local, resolvemos la ruta desde src/assets
+  return new URL(`../assets/${imageName}`, import.meta.url).href;
+};
 </script>
 
 <style scoped>

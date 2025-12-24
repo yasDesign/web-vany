@@ -18,6 +18,11 @@
           :key="course.id"
         >
           <CourseCard :course="course" />
+          <div class="d-grid mt-2">
+            <a :href="getWhatsappUrl(course)" target="_blank" class="btn btn-outline-success btn-sm rounded-pill">
+              <i class="bi bi-whatsapp me-1"></i> Info
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -29,11 +34,18 @@ import { computed } from 'vue';
 import { useData } from '../composables/useData';
 import CourseCard from './CourseCard.vue';
 
-const { courses } = useData();
+const { courses, siteConfig } = useData();
 
 // Lógica para filtrar los últimos 4 cursos
 const latestCourses = computed(() => {
   // Clonamos el array para no mutar el original y tomamos los últimos 4
   return [...courses.value].reverse().slice(0, 4);
 });
+
+const getWhatsappUrl = (course) => {
+  if (!siteConfig.value) return '#';
+  const courseUrl = `${window.location.origin}/cursos/${course.id}`;
+  const message = encodeURIComponent(`¡Hola! Me interesa el curso: ${course.name}\nVer detalles: ${courseUrl}`);
+  return `https://wa.me/${siteConfig.value.phone}?text=${message}`;
+};
 </script>

@@ -2,7 +2,7 @@
     <div class="container py-5" v-if="course">
         <div class="row align-items-start g-5">
             <div class="col-lg-6 sticky-lg-top" style="top: 100px;">
-                <img :src="course.image" class="img-fluid rounded-5 shadow-lg w-100" :alt="course.name">
+                <img :src="getImageUrl(course.image)" class="img-fluid rounded-5 shadow-lg w-100" :alt="course.name">
             </div>
 
             <div class="col-lg-6">
@@ -51,13 +51,22 @@ const { getCourseById, calculateDiscount, siteConfig } = useData();
 const course = ref(null);
 const { updateMeta } = useSeo();
 
+const getImageUrl = (imageName) => {
+  if (!imageName) return '';
+  if (imageName.startsWith('http') || imageName.startsWith('/')) return imageName;
+  return new URL(`../assets/${imageName}`, import.meta.url).href;
+};
+
 // watchEffect reacciona cuando el curso termina de cargar
 watchEffect(() => {
   if (course.value) {
+    const imagePath = getImageUrl(course.value.image);
+    // Aseguramos que la URL sea absoluta (http...) para que WhatsApp la reconozca
+    const absoluteImage = imagePath.startsWith('http') ? imagePath : window.location.origin + imagePath;
     updateMeta(
       course.value.name, 
       course.value.description, 
-      course.value.image
+      absoluteImage
     );
   }
 });
