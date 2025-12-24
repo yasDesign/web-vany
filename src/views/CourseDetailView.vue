@@ -61,8 +61,9 @@ const getImageUrl = (imageName) => {
 watchEffect(() => {
   if (course.value) {
     const imagePath = getImageUrl(course.value.image);
-    // Aseguramos que la URL sea absoluta (http...) para que WhatsApp la reconozca
-    const absoluteImage = imagePath.startsWith('http') ? imagePath : window.location.origin + imagePath;
+    // Si hay imagen, construimos la URL absoluta. Si no, usamos la imagen por defecto (/cover.jpg)
+    const absoluteImage = imagePath ? (imagePath.startsWith('http') ? imagePath : window.location.origin + imagePath) : window.location.origin + '/cover.jpg';
+    console.log('absoluteImage:', absoluteImage);
     updateMeta(
       course.value.name, 
       course.value.description, 
